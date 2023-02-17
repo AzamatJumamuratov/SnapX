@@ -1,0 +1,629 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.web-page {
+    max-width: 1280px;
+}
+
+:root {
+    --colorLightBlue: rgb(0, 179, 255);
+    --colorGray: rgb(141, 141, 141);
+}
+
+p {
+    font-size: 16px;
+}
+
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.color-blue {
+    color: var(--colorLightBlue);
+}
+
+.color-gray {
+    color: var(--colorGray);
+}
+
+.color-bold-black {
+    color: black;
+    font-weight: 800;
+}
+
+.blue-btn {
+    background-color: transparent;
+    border: 2px solid var(--colorLightBlue);
+    border-radius: 4px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--colorLightBlue);
+}
+
+.blue-btn:active {
+    background-color: rgb(0, 101, 145);
+}
+
+.sticked-elements {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+nav {
+    display: flex;
+}
+
+nav>div {
+    width: 33.333%;
+}
+
+.title-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.navigation {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorLightBlue);
+}
+
+.navigation>button
+{
+    display: none;
+    background-color: transparent;
+    border: none; 
+}
+
+.navigation>button>i
+{
+    font-size: 24px;
+    color: white;
+}
+
+.navigation>ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.navigation>ul>li>select {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.navigation>ul>li>a {
+    color: white;
+}
+
+.navigation>ul>li a:hover,
+select>option:hover {
+    color: black;
+    transition: 0.4s;
+}
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin-bottom: 120px;
+}
+
+.banner>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+.banner>.text {
+    width: 60%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner>.text h1,
+.banner>.text>p,
+.banner>.text>.sticked-elements {
+    padding-top: 32px;
+    text-align: center;
+}
+
+.banner>.text>.sticked-elements>button {
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.banner>.text>.sticked-elements>button:active {
+    border-color: var(--colorLightBlue);
+    color: var(--colorLightBlue);
+}
+
+.text a {
+    color: white;
+}
+
+.text a:hover {
+    color: var(--colorLightBlue);
+}
+
+.banner>.winners {
+    position: absolute;
+    top: calc(100% - 100px);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.winners>button {
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: var(--colorLightBlue);
+    opacity: 0.8;
+}
+
+.winners>button:active {
+    background-color: rgb(0, 106, 151);
+}
+
+.winners>div {
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+
+.winners>.rating {
+    background-color: rgb(213, 211, 211);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.rating>div {
+    padding-top: 16px;
+}
+
+.rating>.info {
+    display: flex;
+    gap: 8px;
+}
+
+.winners>div>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+.categories {
+    padding: 32px;
+}
+
+
+.categories>.sticked-elements {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.categories>.sticked-elements>button {
+    padding: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    background-color: var(--colorLightBlue);
+    border: none;
+    border-radius: 4px;
+}
+
+.categories>.sticked-elements>button:active {
+    background-color: rgb(0, 106, 151);
+}
+
+.categories>.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+
+.cards>div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid rgb(177, 177, 177);
+    padding: 16px;
+}
+
+.cards>div>img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.cards>div>.title {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.cards>div>.title>.text {
+    width: calc(100%-50px);
+}
+
+.cards>div>.title>.text>h4 {
+    font-size: 14px;
+}
+
+.cards>div>.title>.text>.sticked-elements>div {
+    padding: 4px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+.cards>div>.title>img {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(225, 225, 225);
+    object-fit: cover;
+}
+
+
+.prev-contests {
+    background-color: rgb(206, 240, 255);
+    padding: 16px;
+}
+
+.prev-contests>.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev-contests>.contests {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 32px;
+}
+
+.contests>div {
+    background-color: white;
+    border-radius: 16px 16px 16px 16px;
+}
+
+.contests>div>.title {
+    display: flex;
+    padding: 16px;
+}
+
+.contests>div>.title>div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.contests>div>img {
+    width: 300px;
+    height: 200px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+
+.prev-contests>.searcher {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing {
+    padding: 16px;
+}
+
+.pricing>.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.pricing>.plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.plans>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 8px;
+}
+
+.plans>div>img {
+    width: 180px;
+    height: 100px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--colorLightBlue);
+    color: white;
+    padding: 16px;
+}
+
+
+
+@media screen and (max-width : 1024px) 
+{
+    .title-page
+    {
+        width: 30%;
+    }
+
+    .navigation
+    {
+        width: 50%;
+    }
+
+    .sign
+    {
+        width: 20%;
+    }
+
+
+    .winners>div
+    {
+        width: 170px;
+        height: 120px;
+        position: relative;
+    }
+
+    .winners>.rating {
+        width: 300px;
+        height: 180px;
+        background-color: rgb(213, 211, 211);
+        border-radius: 8px;
+        padding: 16px;
+    }
+    
+
+    .categories>.cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        padding: 16px;
+    }
+}
+
+
+
+@media screen and (max-width : 768px)
+{
+    p,a,.plans>div>span
+    {
+        font-size: 14px;
+    }
+
+    .title-page
+    {
+        width: 50%;
+    }
+    .navigation
+    {
+        width: auto;
+        position: relative;
+    }
+
+    .navigation>ul
+    {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--colorLightBlue);
+        padding: 16px;
+        border: 3px solid  rgb(0, 101, 145);
+        border-radius: 16px;
+        width: 150px;
+        top: 50%;
+        z-index: 1;
+    }
+
+    .navigation>button
+    {
+        display: block;
+    }
+
+    .navigation:hover>ul
+    {
+        display: block;
+    }
+
+    .sign
+    {
+        width: 40%;
+    }
+
+    .banner
+    {
+        margin-bottom: 16px;
+    }
+
+    .banner>.text
+    {
+        width: 80%;
+        padding: 16px;
+    }
+
+    .winners,.winners>div,.winners>button
+    {
+        display: none;
+    }
+
+    .categories
+    {
+        padding: 8px;
+    }
+
+    .categories>.sticked-elements
+    {
+        flex-direction: column;
+    }
+
+    .categories>.cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    
+    .prev-contests>.contests {
+        flex-wrap: wrap;
+    }
+
+    .contests>div>.title
+    {
+        flex-direction: column;
+    }
+    
+    .contests>div>.title>div {
+        width: 100%;
+        gap: 0;
+    }
+
+    .contests>div>img
+    {
+        height: 120px;
+        width: 100%;
+    }
+
+
+    .pricing>.plans {
+        flex-wrap: wrap;
+    }
+
+    .plans>div>img 
+    {
+        width: 150px;
+        height: 70px;
+    }
+}
+
+
+@media screen and (max-width : 480px)
+{
+    p,a,.plans>div>span
+    {
+        font-size: 12px;
+    }
+
+    .banner
+    {
+        height: 300px;
+    }
+
+    .banner>.text
+    {
+        width: 100%;
+    }
+
+    .banner>.text>h1
+    {
+        font-size: 26px;
+    }
+
+    .categories>.cards
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .prev-contests>.text 
+    {
+        text-align: center;
+    }
+
+    .prev-contests>.contests
+    {
+        padding: 16px;
+    }
+
+
+    .contests>div>img {
+        width: 320px;
+        height: 200px;
+        width: 100%;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .pricing>.title
+    {
+        text-align: center;
+    }
+    
+
+    .plans>div>img {
+        width: 250px;
+        height: 150px;
+    }
+}
