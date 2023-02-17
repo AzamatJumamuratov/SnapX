@@ -1,2 +1,0 @@
-# SnapX
-Adadadadadaddadadaddadadadad
